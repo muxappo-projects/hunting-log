@@ -1,0 +1,9 @@
+[submodule "monster-hunter-DB"]
+	path = monster-hunter-DB
+	url = https://github.com/muxappo/monster-hunter-DB.git
+[submodule "monsters"]
+	path = monsters
+	url = https://github.com/muxappo/monster-hunter-DB.git
+[submodule "hunting-log/monsters"]
+	path = hunting-log/monsters
+	url = https://github.com/muxappo/monster-hunter-DB.git
