@@ -14,6 +14,8 @@ export default function ImgGetter({ monsterName }) {
     <img
       src={`../../monsters/icons/${image}`}
       alt={`An icon of ${monsterName}`}
+      height={200}
+      width={200}
     />
   );
 }

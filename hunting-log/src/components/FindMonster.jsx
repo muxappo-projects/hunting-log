@@ -7,7 +7,9 @@ export default function FindMonster({ setMonster }) {
   function handleSearch(e) {
     e.preventDefault();
     api.fetchMonsterByName(searchTerm).then((returnedMonster) => {
+      console.log(searchTerm);
       setMonster(returnedMonster);
+      setSearchTerm("");
     });
   }
 
