@@ -8,7 +8,7 @@ export default function ImgGetter({ monsterName }) {
   const { games } = matchingMonster;
   const matchingGame = "Monster Hunter World";
 
-  const { image } = games.find((game) => game.game === matchingGame);
+  const { image } = games.find((gameObj) => gameObj.game === matchingGame);
 
   return (
     <img
