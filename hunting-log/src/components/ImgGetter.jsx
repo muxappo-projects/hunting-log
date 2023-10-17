@@ -1,6 +1,7 @@
 import monsterDB from "../../monsters/monsters.json";
+import * as api from "../api";
 
-export default function ImgGetter({ monsterName }) {
+export default function ImgGetter({ monsterName, setMonster }) {
   const { monsters } = monsterDB;
   const matchingMonster = monsters.find(
     (monster) => monster.name === monsterName
@@ -10,12 +11,19 @@ export default function ImgGetter({ monsterName }) {
 
   const { image } = games.find((gameObj) => gameObj.game === matchingGame);
 
+  function searchByCard() {
+    api.fetchMonsterByName(monsterName).then((returnedMonster) => {
+      setMonster(returnedMonster);
+    });
+  }
+
   return (
     <img
       src={`../../monsters/icons/${image}`}
       alt={`An icon of ${monsterName}`}
-      height={200}
-      width={200}
+      height={150}
+      width={150}
+      onClick={searchByCard}
     />
   );
 }

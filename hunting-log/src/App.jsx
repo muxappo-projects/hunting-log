@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import FindMonster from "./components/FindMonster";
-import DisplayMonster from "./components/DisplayMonster";
+import MonsterDetails from "./components/MonsterDetails";
 import MonsterList from "./components/MonsterList";
 
 export default function App() {
@@ -13,9 +13,9 @@ export default function App() {
       <Header />
       <FindMonster setMonster={setMonster} />
       {monster && (
-        <DisplayMonster returnedMonster={monster} setMonster={setMonster} />
+        <MonsterDetails returnedMonster={monster} setMonster={setMonster} />
       )}
-      <MonsterList />
+      <MonsterList setMonster={setMonster} />
     </div>
   );
 }
