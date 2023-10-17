@@ -11,14 +11,30 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
-  color: rgba(64, 48, 35, 0.87);
+  color: rgb(64, 48, 35);
+}
+
+body {
+  padding: 15px;
 }
 
 header {
   justify-content: center;
   font-size: 4em;
   line-height: 1.1;
-  margin-bottom: 0;
+  background-image: url("./Hunter_s_Guild_Crest-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+header > h1 {
+  margin: 0;
+}
+
+header > h2 {
+  font-size: 1em;
+  margin: 0;
 }
 
 button {
@@ -29,6 +45,7 @@ button {
   font-weight: 500;
   font-family: inherit;
   background-color: rgba(64, 48, 35, 0.87);
+  color: wheat;
   scale: 1;
   transition: 0.1s;
 }
@@ -39,20 +56,19 @@ button:hover {
   cursor: pointer;
 }
 
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
 button:active {
   scale: 0.9;
   transition: 0.1s;
 }
 
 form {
-  margin-top: 15px;
-  align-items: center;
-  justify-content: center;
+  margin-top: 10px;
+  width: 360px;
+  display: inline flow-root;
+}
+
+form > label {
+  font-size: 1.3em;
 }
 
 .search-field {
@@ -90,6 +106,10 @@ li > img:active {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  background-color: rgb(103, 93, 75);
+  color: rgb(210, 192, 155);
+  padding-bottom: 25px;
+  border-radius: 50px;
 }
 
 .panel-container {
@@ -111,8 +131,22 @@ li > img:active {
 }
 
 .monster-panel > img {
-  width: 400px;
-  height: 400px;
+  width: 350px;
+  height: 350px;
+}
+
+.monster-name {
+  margin-top: 0;
+}
+
+.monster-species {
+  margin-bottom: 0;
+}
+
+@media only screen and (max-width: 1065px) {
+  header {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (max-width: 500px) {
@@ -128,5 +162,24 @@ li > img:active {
   li > img {
     width: 100px;
     height: 100px;
+  }
+
+  header {
+    font-size: 1em;
+  }
+
+  form {
+    margin-top: 5px;
+    width: 90%;
+    display: block;
+  }
+
+  form > label {
+    font-size: 1em;
+  }
+
+  .search-field {
+    margin: 5px;
+    background-color: rgba(64, 48, 35, 0.87);
   }
 }
