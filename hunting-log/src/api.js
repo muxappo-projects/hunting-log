@@ -4,7 +4,7 @@ export function fetchMonsterByName(searchTerm) {
   );
 }
 
-export function fetchAllMonsters(searchTerm) {
+export function fetchAllMonsters() {
   return fetch(`https://mhw-db.com/monsters?q={"type": "large"}`).then(
     (response) => response.json()
   );
