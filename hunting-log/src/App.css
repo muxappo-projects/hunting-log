@@ -76,30 +76,8 @@ form > label {
   background-color: rgba(64, 48, 35, 0.87);
 }
 
-ul {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-li {
-  padding-right: 15px;
-  padding-left: 15px;
-}
-
-li > img {
-  scale: 1;
-  transition: 0.2s;
-}
-
-li > img:hover {
-  scale: 1.3;
-  transition: 0.2s;
-  cursor: pointer;
-}
-
-li > img:active {
-  scale: 0.8;
-  transition: 0.2s;
+.list-subheader {
+  font-size: 1.4rem;
 }
 
 .monster-list {
@@ -112,6 +90,34 @@ li > img:active {
   border-radius: 50px;
 }
 
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+
+li > img {
+  width: 200px;
+  height: 200px;
+  scale: 1;
+  transition: 0.2s;
+}
+
+li > img:hover {
+  scale: 1.1;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+li > img:active {
+  scale: 0.8;
+  transition: 0.2s;
+}
+
 .panel-container {
   display: flex;
   justify-content: center;
@@ -119,15 +125,11 @@ li > img:active {
 
 .monster-panel {
   background-color: rgb(103, 93, 75);
-  border-radius: 20px;
-  width: 35em;
+  border-radius: 70px;
+  width: 50em;
   padding: 30px;
   margin-top: 15px;
   color: rgb(210, 192, 155);
-}
-
-.monster-name {
-  scale: 1.5;
 }
 
 .monster-panel > img {
@@ -136,10 +138,26 @@ li > img:active {
 }
 
 .monster-name {
+  scale: 1.7;
+}
+
+.monster-name {
   margin-top: 0;
 }
 
 .monster-species {
+  margin-bottom: 0;
+}
+
+.monster-desc {
+  font-size: 1.2rem;
+  color: rgb(64, 48, 35);
+  padding: 5px;
+  border-radius: 15px;
+  background-color: rgb(185, 169, 140);
+}
+
+.error-msg {
   margin-bottom: 0;
 }
 

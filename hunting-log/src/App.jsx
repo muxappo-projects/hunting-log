@@ -7,16 +7,23 @@ import MonsterList from "./components/MonsterList";
 
 export default function App() {
   const [monster, setMonster] = useState("");
+  const [errorMsg, setErrorMsg] = useState("");
 
   return (
     <div className="main">
       <Header />
+      <FindMonster
+        setMonster={setMonster}
+        errorMsg={errorMsg}
+        setErrorMsg={setErrorMsg}
+      />
       {monster && (
         <MonsterDetails returnedMonster={monster} setMonster={setMonster} />
       )}
-      <FindMonster setMonster={setMonster} />
-      <h3>Or click on any of the below icons for more info</h3>
-      <MonsterList setMonster={setMonster} />
+      <h3 className="list-subheader">
+        ...or click on any of the below icons for more info!
+      </h3>
+      <MonsterList setMonster={setMonster} setErrorMsg={setErrorMsg} />
     </div>
   );
 }

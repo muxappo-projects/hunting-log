@@ -22,7 +22,7 @@ export default function MonsterDetails({ returnedMonster, setMonster }) {
         <h3 className="monster-species">{formatSpecies(monster.species)}</h3>
         <h2 className="monster-name">{monster.name}</h2>
         <ImgGetter monsterName={monster.name} setMonster={setMonster} />
-        <p>{monster.description}</p>
+        <p className="monster-desc">{monster.description}</p>
         <button onClick={clearSelection}>Hide Monster Profile</button>
       </div>
     </section>

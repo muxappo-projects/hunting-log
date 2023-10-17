@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import * as api from "../api.js";
 import MonsterCard from "./MonsterCard.jsx";
 
-export default function MonsterList({ setMonster }) {
+export default function MonsterList({ setMonster, setErrorMsg }) {
   const [monsterList, setMonsterList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
 
@@ -24,6 +24,7 @@ export default function MonsterList({ setMonster }) {
             name={monster.name}
             species={monster.species}
             setMonster={setMonster}
+            setErrorMsg={setErrorMsg}
           />
         );
       })}
