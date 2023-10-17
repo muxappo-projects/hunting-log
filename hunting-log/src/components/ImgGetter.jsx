@@ -1,7 +1,7 @@
 import monsterDB from "../../monsters/monsters.json";
 import * as api from "../api";
 
-export default function ImgGetter({ monsterName, setMonster }) {
+export default function ImgGetter({ monsterName, setMonster, setIsLoading }) {
   const { monsters } = monsterDB;
   const matchingMonster = monsters.find(
     (monster) => monster.name === monsterName

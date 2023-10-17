@@ -4,12 +4,12 @@ import MonsterCard from "./MonsterCard.jsx";
 
 export default function MonsterList({ setMonster }) {
   const [monsterList, setMonsterList] = useState([]);
-  const [isLoading, setisLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     api.fetchAllMonsters().then((monsters) => {
       setMonsterList(monsters);
-      setisLoading(false);
+      setIsLoading(false);
     });
   });
 
@@ -22,6 +22,7 @@ export default function MonsterList({ setMonster }) {
           <MonsterCard
             key={monster.id}
             name={monster.name}
+            species={monster.species}
             setMonster={setMonster}
           />
         );

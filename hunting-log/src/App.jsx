@@ -11,10 +11,11 @@ export default function App() {
   return (
     <div className="main">
       <Header />
-      <FindMonster setMonster={setMonster} />
       {monster && (
         <MonsterDetails returnedMonster={monster} setMonster={setMonster} />
       )}
+      <FindMonster setMonster={setMonster} />
+      <h3>Or click on any of the below icons for more info</h3>
       <MonsterList setMonster={setMonster} />
     </div>
   );
