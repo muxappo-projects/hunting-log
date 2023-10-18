@@ -119,7 +119,7 @@ li > img:hover {
 }
 
 li > img:active {
-  scale: 0.8;
+  scale: 1;
   transition: 0.2s;
 }
 
