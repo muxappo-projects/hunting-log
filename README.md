@@ -6,20 +6,25 @@ Retrieves data about the enemies from the video game Monster Hunter World, then 
 
 Main page displays the retrieved monsters' names along with matching representative icons, all responsive to mouse hover. Clicking an icon or searching for a monster by name will display a short profile card for the retrieved monster.
 
-
 ## Basic functionality
 
-- [x]  Search functionality
-- [x]  Comprehensive list of large monsters
-- [x]  Trigger search by clicking list icons
-- [x]  Monster card scrolls into view upon render
+### Key:
+
+- [x] Done
+- [ ] In Progress
+- Planned, not started
+
+- [x] Search functionality
+- [x] Comprehensive list of large monsters
+- [x] Trigger search by clicking list icons
+- [x] Monster card scrolls into view upon render
+- [ ] Gives details on elemental weaknesses, with supp. icons
 
 ### Extra features
 
-- [ ]  Multi-page emulation (w/ React Router)
-- [ ]  Small monsters page
-- [ ]  Endemic life page
-
+- Multi-page emulation (w/ React Router)
+- Small monsters page
+- Endemic life page
 
 ## Demo
 
@@ -28,6 +33,7 @@ Main page displays the retrieved monsters' names along with matching representat
 <img src="site/demo/monster_card.png?raw=true" width=400 />
 
 ![Page Movement Demo GIF](site/demo/8316m8.gif?raw=true "Movement Demo")
+
 ## Run Locally
 
 Clone the project
@@ -55,16 +61,14 @@ Host locally
   npm run dev
 ```
 
-
 ## Tech
 
-- React 
+- React
 - JavaScript
 - HTML
 - CSS
 
-
 ## Acknowledgements
 
- - The [Monster Hunter World API](https://docs.mhw-db.com/) where the monster data is being retrieved from
- - CrimsonNynja's [Monster Hunter Database](https://github.com/CrimsonNynja/monster-hunter-DB), containing the icons used
+- The [Monster Hunter World API](https://docs.mhw-db.com/) where the monster data is being retrieved from
+- CrimsonNynja's [Monster Hunter Database](https://github.com/CrimsonNynja/monster-hunter-DB), containing the icons used
