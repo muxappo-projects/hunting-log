@@ -20,7 +20,6 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
 
   return (
     <div>
-      {errorMsg && <p className="error-msg">{errorMsg}</p>}
       <form className="search-form" onSubmit={handleSearch}>
         <label htmlFor="monster-input">Search for a monster: </label>
         <input
@@ -32,6 +31,7 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
           required
         />
         <button className="search-button">Search</button>
+        {errorMsg && <p className="error-msg">{errorMsg}</p>}
       </form>
     </div>
   );
