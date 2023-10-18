@@ -1,7 +1,12 @@
 import ImgGetter from "./ImgGetter";
+import { useEffect, forwardRef } from "react";
 
-export default function MonsterDetails({ returnedMonster, setMonster }) {
+const MonsterDetails = forwardRef(({ returnedMonster, setMonster }, ref) => {
   const [monster] = returnedMonster;
+
+  useEffect(() => {
+    ref.current.scrollIntoView({ behavior: "smooth" });
+  }, [monster]);
 
   function clearSelection() {
     setMonster("");
@@ -17,7 +22,7 @@ export default function MonsterDetails({ returnedMonster, setMonster }) {
   }
 
   return (
-    <section className="panel-container">
+    <section className="panel-container" ref={ref}>
       <div className="monster-panel">
         <h3 className="monster-species">{formatSpecies(monster.species)}</h3>
         <h2 className="monster-name">{monster.name}</h2>
@@ -27,4 +32,6 @@ export default function MonsterDetails({ returnedMonster, setMonster }) {
       </div>
     </section>
   );
-}
+});
+
+export default MonsterDetails;

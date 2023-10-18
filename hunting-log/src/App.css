@@ -98,22 +98,22 @@ ul {
 li {
   padding-right: 15px;
   padding-left: 15px;
+  scale: 1;
+  transition: 0.2s;
 }
 
 li > img {
   width: 200px;
   height: 200px;
-  scale: 1;
-  transition: 0.2s;
 }
 
-li > img:hover {
+li:hover {
   scale: 1.1;
   transition: 0.2s;
   cursor: pointer;
 }
 
-li > img:active {
+li:active {
   scale: 0.8;
   transition: 0.2s;
 }
