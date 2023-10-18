@@ -23,9 +23,9 @@ Main page displays the retrieved monsters' names along with matching representat
 
 ## Demo
 
-<img src="site/screenshots/main_page.png" width=500 />
+<img src="site/demo/main_page.png" width=500 />
 
-<img src="site/screenshots/monster_card.png?raw=true" width=400 />
+<img src="site/demo/monster_card.png?raw=true" width=400 />
 
 ![Page Movement Demo GIF](site/demo/8316m8.gif?raw=true "Movement Demo")
 ## Run Locally
