@@ -81,11 +81,18 @@ form > label {
   font-size: 1.4rem;
 }
 
+.list-background {
+  background-image: url("./images/Hunter_s_Guild_Crest-removebg-preview.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1000px auto;
+}
+
 .monster-list {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgba(59, 54, 43, 0.788);
+  background-color: rgba(59, 54, 43, 0.874);
   color: rgb(210, 192, 155);
   padding-bottom: 25px;
   border-radius: 50px;
@@ -126,10 +133,6 @@ li > img:active {
 .panel-container {
   display: flex;
   justify-content: center;
-  background-image: url("./images/Hunter_s_Guild_Crest-removebg-preview.png");
-  background-position: center;
-  background-repeat: repeat-x;
-  background-size: 33.3% auto;
 }
 
 .monster-panel {
@@ -171,6 +174,12 @@ li > img:active {
   margin-bottom: 0;
 }
 
+@media only screen and (max-width: 1200px) {
+  .list-background {
+    background-image: none;
+  }
+}
+
 @media only screen and (max-width: 1065px) {
   header {
     font-size: 1.5rem;
@@ -190,6 +199,10 @@ li > img:active {
   li > img {
     width: 100px;
     height: 100px;
+  }
+
+  li > h3 {
+    font-size: 0.7rem;
   }
 
   header {
