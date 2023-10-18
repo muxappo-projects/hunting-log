@@ -10,7 +10,6 @@ export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
   const matchingGame = "Monster Hunter World";
 
   const { image } = games.find((gameObj) => gameObj.game === matchingGame);
-
   function searchByCard() {
     api.fetchMonsterByName(monsterName).then((returnedMonster) => {
       setMonster(returnedMonster);

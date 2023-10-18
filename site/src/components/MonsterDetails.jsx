@@ -7,12 +7,18 @@ const MonsterDetails = forwardRef(
       ref.current.scrollIntoView({ behavior: "smooth" });
     }, [monster]);
 
+    const biggestWeakness = monster.weaknesses.find((weakness) => {
+      console.log(monster.weaknesses);
+      return weakness.stars === 3;
+    });
+
+    console.log(biggestWeakness);
     function clearSelection() {
       setMonster("");
     }
 
-    function formatSpecies(species) {
-      return species
+    function formatContent(content) {
+      return content
         .split(" ")
         .map((word) => {
           return word[0].toUpperCase() + word.slice(1);
@@ -23,9 +29,12 @@ const MonsterDetails = forwardRef(
     return (
       <section className="panel-container" ref={ref}>
         <div className="monster-panel">
-          <h3 className="monster-species">{formatSpecies(monster.species)}</h3>
+          <h3 className="monster-species">{formatContent(monster.species)}</h3>
           <h2 className="monster-name">{monster.name}</h2>
           <ImgGetter monsterName={monster.name} setMonster={setMonster} />
+          {biggestWeakness && (
+            <p>Weak to {formatContent(biggestWeakness.element)} damage</p>
+          )}
           <p className="monster-desc">{monster.description}</p>
           <button onClick={clearSelection}>Close Monster Card</button>
         </div>
