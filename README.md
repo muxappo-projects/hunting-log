@@ -1,1 +1,2 @@
 # hunting-log
+- [ ] Additional pages
