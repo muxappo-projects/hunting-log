@@ -7,4 +7,4 @@ const ScrollButton = forwardRef(({}, ref) => {
   return <button onClick={scrollUp}>Scroll To Top</button>;
 });
 
-export default ScrollToTop;
+export default ScrollButton;
