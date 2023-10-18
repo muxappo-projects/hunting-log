@@ -6,6 +6,13 @@ Retrieves data about the enemies from the video game Monster Hunter World, then 
 
 Main page displays the retrieved monsters' names along with matching representative icons, all responsive to mouse hover. Clicking an icon or searching for a monster by name will display a short profile card for the retrieved monster.
 
+## Tech
+
+- React
+- JavaScript
+- HTML
+- CSS
+
 ## Basic functionality
 
 ### Key:
@@ -62,13 +69,6 @@ Host locally
   cd site
   npm run dev
 ```
-
-## Tech
-
-- React
-- JavaScript
-- HTML
-- CSS
 
 ## Acknowledgements
 
