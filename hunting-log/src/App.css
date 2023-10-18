@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
 :root {
-  background-color: rgb(206, 185, 145);
+  background-image: url("./vintage-crumpled-paper-textured-background_53876-103940.avif");
 }
 
 #root {
@@ -74,6 +74,7 @@ form > label {
 .search-field {
   margin: 10px;
   background-color: rgba(64, 48, 35, 0.87);
+  color: rgb(232, 212, 172);
 }
 
 .list-subheader {
@@ -84,7 +85,7 @@ form > label {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgb(103, 93, 75);
+  background-color: rgba(59, 54, 43, 0.788);
   color: rgb(210, 192, 155);
   padding-bottom: 25px;
   border-radius: 50px;
@@ -102,7 +103,7 @@ li {
 }
 
 li > h3 {
-  background-color: rgb(66, 55, 40);
+  background-color: rgb(52, 43, 31);
   border-radius: 70px;
 }
 

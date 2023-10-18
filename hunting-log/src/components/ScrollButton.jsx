@@ -1,6 +1,6 @@
 import { forwardRef } from "react";
 
-const ScrollToTop = forwardRef(({}, ref) => {
+const ScrollButton = forwardRef(({}, ref) => {
   function scrollUp() {
     ref.current.scrollIntoView({ behavior: "smooth" });
   }

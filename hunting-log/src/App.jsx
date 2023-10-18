@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import FindMonster from "./components/FindMonster";
 import MonsterDetails from "./components/MonsterDetails";
 import MonsterList from "./components/MonsterList";
-import ScrollToTop from "./components/ScrollToTop";
+import ScrollButton from "./components/ScrollButton";
 
 export default function App() {
   const [monster, setMonster] = useState("");
@@ -31,7 +31,7 @@ export default function App() {
         ...or click on any of the below icons for more info!
       </h3>
       <MonsterList setMonster={setMonster} setErrorMsg={setErrorMsg} />
-      <ScrollToTop ref={topRef} />
+      <ScrollButton ref={topRef} />
     </div>
   );
 }
