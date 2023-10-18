@@ -51,6 +51,7 @@ Install dependencies
 Host locally
 
 ```bash
+  cd site
   npm run dev
 ```
 
