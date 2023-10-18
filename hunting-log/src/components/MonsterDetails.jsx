@@ -28,7 +28,7 @@ const MonsterDetails = forwardRef(({ returnedMonster, setMonster }, ref) => {
         <h2 className="monster-name">{monster.name}</h2>
         <ImgGetter monsterName={monster.name} setMonster={setMonster} />
         <p className="monster-desc">{monster.description}</p>
-        <button onClick={clearSelection}>Hide Monster Profile</button>
+        <button onClick={clearSelection}>Close Monster Card</button>
       </div>
     </section>
   );

@@ -96,10 +96,14 @@ ul {
 }
 
 li {
-  padding-right: 15px;
-  padding-left: 15px;
+  padding: 15px 15px;
   scale: 1;
   transition: 0.2s;
+}
+
+li > h3 {
+  background-color: rgb(66, 55, 40);
+  border-radius: 70px;
 }
 
 li > img {
@@ -130,6 +134,7 @@ li:active {
   padding: 30px;
   margin-top: 15px;
   color: rgb(210, 192, 155);
+  box-shadow: 5px, 5px, 8px, 5px;
 }
 
 .monster-panel > img {

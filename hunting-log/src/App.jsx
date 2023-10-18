@@ -15,11 +15,6 @@ export default function App() {
   return (
     <div className="main" ref={topRef}>
       <Header />
-      <FindMonster
-        setMonster={setMonster}
-        errorMsg={errorMsg}
-        setErrorMsg={setErrorMsg}
-      />
       {monster && (
         <MonsterDetails
           returnedMonster={monster}
@@ -27,6 +22,11 @@ export default function App() {
           ref={monsterDetailsRef}
         />
       )}
+      <FindMonster
+        setMonster={setMonster}
+        errorMsg={errorMsg}
+        setErrorMsg={setErrorMsg}
+      />
       <h3 className="list-subheader">
         ...or click on any of the below icons for more info!
       </h3>
