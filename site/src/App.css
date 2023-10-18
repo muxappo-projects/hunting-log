@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Mate+SC&display=swap");
 
 :root {
-  background-image: url("./vintage-crumpled-paper-textured-background_53876-103940.avif");
+  background-image: url("./images/vintage-crumpled-paper-textured-background_53876-103940.avif");
 }
 
 #root {
@@ -22,7 +22,7 @@ header {
   justify-content: center;
   font-size: 4em;
   line-height: 1.1;
-  background-image: url("./Hunter_s_Guild_Crest-removebg-preview.png");
+  background-image: url("./images/Hunter_s_Guild_Crest-removebg-preview.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -131,11 +131,11 @@ li > img:active {
 .monster-panel {
   background-color: rgb(103, 93, 75);
   border-radius: 70px;
-  width: 50em;
+  width: 35em;
   padding: 30px;
   margin-top: 15px;
   color: rgb(210, 192, 155);
-  box-shadow: 5px, 5px, 8px, 5px;
+  box-shadow: 5px, 5px, 8px, 5px, black;
 }
 
 .monster-panel > img {
