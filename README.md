@@ -14,6 +14,8 @@ Main page displays the retrieved monsters' names along with matching representat
 - [ ] In Progress
 - Planned, not started
 
+---
+
 - [x] Search functionality
 - [x] Comprehensive list of large monsters
 - [x] Trigger search by clicking list icons
