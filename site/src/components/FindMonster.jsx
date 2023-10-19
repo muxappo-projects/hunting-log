@@ -13,8 +13,8 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
         setSearchTerm("");
         setErrorMsg("");
       })
-      .catch((err) => {
-        setErrorMsg(err.message);
+      .catch(() => {
+        setErrorMsg("Monster not found!");
       });
   }
 
