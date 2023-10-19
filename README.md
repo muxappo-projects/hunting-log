@@ -37,13 +37,13 @@ Main page displays the retrieved monsters' names along with matching representat
 
 ## Demo
 
-The main page displaying the full monster list:  return
+The main page displaying the full monster list: <br>
 <img src="site/demo/main_page.png" width=500 />
 
-The monster profile card:  return
+The monster profile card: <br>
 <img src="site/demo/monster_card.png?raw=true" width=400 />
 
-A short demo showcasing the responsiveness of the icons and auto-scroll behaviour:  return
+A short demo showcasing the responsiveness of the icons and auto-scroll behaviour: <br>
 ![Page Movement Demo GIF](site/demo/8316m8.gif?raw=true "Movement Demo")
 
 ## Run Locally
