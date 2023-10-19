@@ -27,11 +27,11 @@ Main page displays the retrieved monsters' names along with matching representat
 - [x] Comprehensive list of large monsters
 - [x] Trigger search by clicking list icons
 - [x] Monster card scrolls into view upon render
-- [ ] Gives details on elemental weaknesses, with supp. icons
+- [x] Gives details on elemental weaknesses, with supp. icons
+- [ ] Multi-page emulation (w/ React Router)
 
 ### Extra features
 
-- Multi-page emulation (w/ React Router)
 - Small monsters page
 - Endemic life page
 
