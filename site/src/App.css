@@ -150,6 +150,16 @@ li > img:active {
   height: 350px;
 }
 
+.weakness-container {
+  display: flex;
+  justify-content: center;
+}
+
+.element-icon {
+  width: 50px;
+  height: 50px;
+}
+
 .monster-name {
   scale: 1.7;
 }
@@ -222,5 +232,12 @@ li > img:active {
   .search-field {
     margin: 5px;
     background-color: rgba(64, 48, 35, 0.87);
+  }
+
+  .element-icon {
+    margin-left: 5px;
+    align-self: center;
+    width: 25px;
+    height: 25px;
   }
 }
