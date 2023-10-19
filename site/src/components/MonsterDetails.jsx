@@ -1,5 +1,10 @@
 import ImgGetter from "./ImgGetter";
 import { useEffect, forwardRef } from "react";
+import waterElem from "../images/water_element.png";
+import fireElem from "../images/fire_element.png";
+import dragonElem from "../images/dragon_element.png";
+import thunderElem from "../images/thunder_element.png";
+import iceElem from "../images/ice_element.png";
 
 const MonsterDetails = forwardRef(
   ({ returnedMonster: [monster], setMonster }, ref) => {
@@ -8,11 +13,9 @@ const MonsterDetails = forwardRef(
     }, [monster]);
 
     const biggestWeakness = monster.weaknesses.find((weakness) => {
-      console.log(monster.weaknesses);
       return weakness.stars === 3;
     });
 
-    console.log(biggestWeakness);
     function clearSelection() {
       setMonster("");
     }
@@ -26,6 +29,14 @@ const MonsterDetails = forwardRef(
         .join(" ");
     }
 
+    const elements = {
+      water: waterElem,
+      fire: fireElem,
+      dragon: dragonElem,
+      thunder: thunderElem,
+      ice: iceElem,
+    };
+
     return (
       <section className="panel-container" ref={ref}>
         <div className="monster-panel">
@@ -33,10 +44,17 @@ const MonsterDetails = forwardRef(
           <h2 className="monster-name">{monster.name}</h2>
           <ImgGetter monsterName={monster.name} setMonster={setMonster} />
           {biggestWeakness && (
-            <p>Weak to {formatContent(biggestWeakness.element)} damage</p>
+            <div className="weakness-container">
+              <p>Weak to {formatContent(biggestWeakness.element)} damage</p>
+              <img
+                className="element-icon"
+                src={elements[biggestWeakness.element]}
+                alt={`The in-game icon for ${biggestWeakness.element} damage`}
+              />
+            </div>
           )}
           <p className="monster-desc">{monster.description}</p>
-          <button onClick={clearSelection}>Close Monster Card</button>
+          <button onClick={clearSelection}>Close Monster Profile</button>
         </div>
       </section>
     );
