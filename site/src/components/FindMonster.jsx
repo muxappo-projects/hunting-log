@@ -27,6 +27,7 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
           id="monster-input"
           type="text"
           value={searchTerm}
+          placeholder="Enter Monster Name"
           onChange={(e) => setSearchTerm(e.target.value)}
           required
         />
