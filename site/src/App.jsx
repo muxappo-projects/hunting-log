@@ -7,22 +7,23 @@ import MonsterList from "./components/MonsterList";
 import ScrollButton from "./components/ScrollButton";
 
 export default function App() {
-  const [monster, setMonster] = useState("");
+  const [monster, setMonster] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
   const monsterDetailsRef = useRef(null);
   const topRef = useRef(null);
-
+  console.log(monster);
   return (
     <div className="main" ref={topRef}>
       <Header />
       {monster && (
         <MonsterDetails
-          returnedMonster={monster}
+          monster={monster}
           setMonster={setMonster}
           ref={monsterDetailsRef}
         />
       )}
       <FindMonster
+        monster={monster}
         setMonster={setMonster}
         errorMsg={errorMsg}
         setErrorMsg={setErrorMsg}

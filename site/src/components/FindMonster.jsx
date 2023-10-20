@@ -1,19 +1,25 @@
 import { useState } from "react";
 import * as api from "../api.js";
 
-export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
+export default function FindMonster({
+  monster,
+  setMonster,
+  errorMsg,
+  setErrorMsg,
+}) {
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSearch(e) {
     e.preventDefault();
     api
       .fetchMonsterByName(searchTerm)
-      .then((returnedMonster) => {
+      .then(([returnedMonster]) => {
+        console.log(returnedMonster);
         setMonster(returnedMonster);
         setSearchTerm("");
         setErrorMsg("");
       })
-      .catch(() => {
+      .catch((err) => {
         setErrorMsg("Monster not found!");
       });
   }
@@ -27,7 +33,7 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
           id="monster-input"
           type="text"
           value={searchTerm}
-          placeholder="Enter Monster Name"
+          placeholder="Anjanath, Pukei-Pukei..."
           onChange={(e) => setSearchTerm(e.target.value)}
           required
         />

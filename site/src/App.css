@@ -26,6 +26,7 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  max-width: 100%;
 }
 
 header > h1 {
@@ -51,13 +52,13 @@ button {
 }
 
 button:hover {
-  scale: 1.1;
+  scale: 1.05;
   transition: 0.1s;
   cursor: pointer;
 }
 
 button:active {
-  scale: 0.9;
+  scale: 0.95;
   transition: 0.1s;
 }
 
@@ -73,6 +74,9 @@ form > label {
 
 .search-field {
   margin: 10px;
+  border: 1px solid transparent;
+  padding: 5px;
+  border-radius: 5px;
   background-color: rgba(64, 48, 35, 0.87);
   color: rgb(232, 212, 172);
 }
@@ -192,7 +196,7 @@ li > img:active {
 
 @media only screen and (max-width: 1065px) {
   header {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
   }
 }
 
@@ -204,6 +208,10 @@ li > img:active {
 
   .monster-panel {
     padding: 15px;
+  }
+
+  li {
+    padding: 10px 10px;
   }
 
   li > img {
@@ -222,7 +230,7 @@ li > img:active {
   form {
     margin-top: 5px;
     width: 90%;
-    display: block;
+    display: inline flow-root;
   }
 
   form > label {
@@ -235,9 +243,8 @@ li > img:active {
   }
 
   .element-icon {
-    margin-left: 5px;
     align-self: center;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
 }
