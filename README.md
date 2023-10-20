@@ -12,6 +12,7 @@ Main page displays the retrieved monsters' names along with matching representat
 - JavaScript
 - HTML
 - CSS
+- External Monster Hunter API
 
 ## Basic functionality
 
