@@ -12,7 +12,7 @@ export default function App() {
   const monsterDetailsRef = useRef(null);
   const topRef = useRef(null);
   return (
-    <div className="main" ref={topRef}>
+    <main className="main" ref={topRef}>
       <Header />
       {monster && (
         <MonsterDetails
@@ -32,6 +32,6 @@ export default function App() {
       </h3>
       <MonsterList setMonster={setMonster} setErrorMsg={setErrorMsg} />
       <ScrollButton ref={topRef} />
-    </div>
+    </main>
   );
 }
