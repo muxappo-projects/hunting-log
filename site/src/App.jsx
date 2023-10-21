@@ -11,7 +11,6 @@ export default function App() {
   const [errorMsg, setErrorMsg] = useState("");
   const monsterDetailsRef = useRef(null);
   const topRef = useRef(null);
-  console.log(monster);
   return (
     <div className="main" ref={topRef}>
       <Header />

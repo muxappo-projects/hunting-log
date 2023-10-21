@@ -11,7 +11,6 @@ const MonsterDetails = forwardRef(({ monster, setMonster }, ref) => {
   useEffect(() => {
     ref.current.scrollIntoView({ behavior: "smooth" });
   }, [monster]);
-  console.log(monster);
 
   const biggestWeakness = monster.weaknesses.find((weakness) => {
     return weakness.stars === 3;

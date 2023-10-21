@@ -4,7 +4,6 @@ export function fetchMonsterByName(searchTerm) {
   return request
     .get(`https://mhw-db.com/monsters?q={"name": "${searchTerm}"}`)
     .then(({ data }) => {
-      console.log(data);
       return data;
     })
     .catch((err) => err);

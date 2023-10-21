@@ -14,7 +14,6 @@ export default function FindMonster({
     api
       .fetchMonsterByName(searchTerm)
       .then(([returnedMonster]) => {
-        console.log(returnedMonster);
         setMonster(returnedMonster);
         setSearchTerm("");
         setErrorMsg("");
