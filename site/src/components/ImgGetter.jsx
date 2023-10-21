@@ -1,4 +1,4 @@
-import monsterDB from "../../monsters/monsters.json";
+import monsterDB from "site/monsters/monsters.json";
 import * as api from "../api";
 
 export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
@@ -19,7 +19,7 @@ export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
 
   return (
     <img
-      src={`../../monsters/icons/${image}`}
+      src={`site/monsters/icons/${image}`}
       alt={`An icon of ${monsterName}`}
       height={150}
       width={150}
