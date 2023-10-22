@@ -29,10 +29,7 @@ Main page displays the retrieved monsters' names along with matching representat
 - [x] Trigger search by clicking list icons
 - [x] Monster card scrolls into view upon render
 - [x] Gives details on elemental weaknesses, with supp. icons
-- [ ] Multi-page emulation (w/ React Router)
-
-### Extra features
-
+- Multi-page emulation (w/ React Router)
 - Small monsters page
 - Endemic life page
 
@@ -46,6 +43,10 @@ The monster profile card: <br>
 
 A short demo showcasing the responsiveness of the icons and auto-scroll behaviour: <br>
 ![Page Movement Demo GIF](site/demo/8316m8.gif?raw=true "Movement Demo")
+
+## Deployment
+
+![Link to deployed site](https://mh-hunting-log.onrender.com/)
 
 ## Run Locally
 
