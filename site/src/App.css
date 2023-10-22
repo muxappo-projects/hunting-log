@@ -20,7 +20,7 @@ body {
 
 header {
   justify-content: center;
-  font-size: 4em;
+  font-size: 3em;
   line-height: 1.1;
   background-image: url("./images/Hunter_s_Guild_Crest-removebg-preview.png");
   background-repeat: no-repeat;
@@ -146,7 +146,6 @@ li > img:active {
   padding: 30px;
   margin-top: 15px;
   color: rgb(210, 192, 155);
-  box-shadow: 5px, 5px, 8px, 5px, black;
 }
 
 .monster-panel > img {

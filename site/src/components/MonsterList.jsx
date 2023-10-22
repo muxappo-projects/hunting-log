@@ -1,23 +1,29 @@
 import { useState, useEffect, useContext } from "react";
-import * as api from "../api.js";
-import MonsterCard from "./MonsterCard.jsx";
 import { LoadingContext } from "../contexts/LoadingContext.jsx";
+import ScrollButton from "./ScrollButton.jsx";
+import MonsterCard from "./MonsterCard.jsx";
+import * as api from "../api.js";
 
-export default function MonsterList({ setMonster, setErrorMsg }) {
+export default function MonsterList({ size, setMonster, setErrorMsg, topRef }) {
   const [monsterList, setMonsterList] = useState([]);
   const { isLoading, setIsLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     api.fetchAllMonsters().then((monsters) => {
-      setMonsterList(monsters);
+      setMonsterList(() => {
+        return monsters.filter((monster) => monster.type === size);
+      });
       setIsLoading(false);
     });
-  });
+  }, []);
 
-  if (isLoading === true) return <p>Loading...</p>;
+  if (isLoading === true) return <p>Fetching Monster Info...</p>;
 
   return (
     <div className="list-background">
+      <h3 className="list-subheader">
+        Click on any of the icons to view more info:
+      </h3>
       <ul className="monster-list">
         {monsterList.map((monster) => {
           return (
@@ -31,6 +37,7 @@ export default function MonsterList({ setMonster, setErrorMsg }) {
           );
         })}
       </ul>
+      <ScrollButton ref={topRef} />
     </div>
   );
 }

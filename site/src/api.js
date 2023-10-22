@@ -9,7 +9,7 @@ export function fetchMonsterByName(searchTerm) {
     .catch((err) => err);
 }
 
-export function fetchAllMonsters() {
+export function fetchLargeMonsters() {
   return request
     .get(`https://mhw-db.com/monsters?q={"type": "large"}`)
     .then(({ data }) => {
@@ -17,8 +17,22 @@ export function fetchAllMonsters() {
     });
 }
 
+export function fetchSmallMonsters() {
+  return request
+    .get(`https://mhw-db.com/monsters?q={"type": "small"}`)
+    .then(({ data }) => {
+      return data;
+    });
+}
+
+export function fetchAllMonsters() {
+  return request.get("https://mhw-db.com/monsters").then(({ data }) => {
+    return data;
+  });
+}
+
 export function fetchMonsterDB() {
   return request.get("/monster-hunter-DB/monsters.json").then(({ data }) => {
-    return data.monsters;
+    return data;
   });
 }

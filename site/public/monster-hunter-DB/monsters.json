@@ -2898,6 +2898,15 @@
       ]
     },
     {
+      "name": "Hornetaur",
+      "games": [
+        {
+          "game": "Monster Hunter World",
+          "image": "MHW-Hornetaur_Icon.png"
+        }
+      ]
+    },
+    {
       "_id": {
         "$oid": "5dff87fd9dabf81e7717cec1"
       },

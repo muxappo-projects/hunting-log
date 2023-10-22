@@ -1,5 +1,5 @@
-import ImgGetter from "./ImgGetter";
 import { useEffect, forwardRef } from "react";
+import ImgGetter from "./ImgGetter";
 import waterElem from "../images/water_element.png";
 import fireElem from "../images/fire_element.png";
 import dragonElem from "../images/dragon_element.png";
