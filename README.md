@@ -46,7 +46,7 @@ A short demo showcasing the responsiveness of the icons and auto-scroll behaviou
 
 ## Deployment
 
-![Link to deployed site](https://mh-hunting-log.onrender.com/)
+[Link to deployed site](https://mh-hunting-log.onrender.com/)
 
 ## Run Locally
 
