@@ -85,13 +85,6 @@ form > label {
   font-size: 1.4rem;
 }
 
-.list-background {
-  background-image: url("./images/Hunter_s_Guild_Crest-removebg-preview.png");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: 1000px auto;
-}
-
 .monster-list {
   display: flex;
   justify-content: center;

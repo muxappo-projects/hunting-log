@@ -21,6 +21,7 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
   return (
     <form className="search-form" onSubmit={handleSearch}>
       <label htmlFor="monster-input">Search for a monster: </label>
+
       <input
         className="search-field"
         id="monster-input"
@@ -30,6 +31,7 @@ export default function FindMonster({ setMonster, errorMsg, setErrorMsg }) {
         onChange={(e) => setSearchTerm(e.target.value)}
         required
       />
+
       <button className="search-button">Search</button>
       {errorMsg && <p className="error-msg">{errorMsg}</p>}
     </form>

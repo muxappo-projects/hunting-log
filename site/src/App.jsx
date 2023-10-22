@@ -2,10 +2,8 @@ import { useState, useRef } from "react";
 import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
-import FindMonster from "./components/FindMonster";
 import MonsterDetails from "./components/MonsterDetails";
 import MonsterList from "./components/MonsterList";
-import ScrollButton from "./components/ScrollButton";
 import "./App.css";
 
 export default function App() {
@@ -17,6 +15,7 @@ export default function App() {
   return (
     <main className="main" ref={topRef}>
       <Header />
+
       {monster && (
         <MonsterDetails
           monster={monster}

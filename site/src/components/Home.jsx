@@ -14,10 +14,10 @@ export default function Home({ monster, setMonster, errorMsg, setErrorMsg }) {
         Or click below to see full lists by monster type:
       </h3>
       <Link to={"/large-monsters"}>
-        <button>Large</button>
+        <button>Large Monsters (42)</button>
       </Link>
       <Link to={"/small-monsters"}>
-        <button>Small</button>
+        <button>Small Monsters (16)</button>
       </Link>
     </div>
   );

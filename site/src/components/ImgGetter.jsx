@@ -34,7 +34,7 @@ export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
   return (
     <img
       src={`/monster-hunter-DB/icons/${monsterImage}`}
-      alt={`An icon of ${monsterName}`}
+      alt={monsterName}
       height={150}
       width={150}
       onClick={searchByCard}

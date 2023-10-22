@@ -36,3 +36,14 @@ export function fetchMonsterDB() {
     return data;
   });
 }
+
+export function fetchMonstersBySpecies(species, size) {
+  return request
+    .get(
+      `https://mhw-db.com/monsters?q={"species": "${species}", "type": "${size}"}`
+    )
+    .then(({ data }) => {
+      console.log(data);
+      return data;
+    });
+}
