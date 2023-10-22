@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import * as api from "../api.js";
 import MonsterCard from "./MonsterCard.jsx";
+import { LoadingContext } from "../contexts/LoadingContext.jsx";
 
 export default function MonsterList({ setMonster, setErrorMsg }) {
   const [monsterList, setMonsterList] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const { isLoading, setIsLoading } = useContext(LoadingContext);
 
   useEffect(() => {
     api.fetchAllMonsters().then((monsters) => {

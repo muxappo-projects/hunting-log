@@ -1,3 +1,3 @@
 [submodule "site/monster-hunter-DB"]
-	path = site/monster-hunter-DB
+	path = public/monster-hunter-DB
 	url = https://github.com/muxappo/monster-hunter-DB.git

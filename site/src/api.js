@@ -16,3 +16,9 @@ export function fetchAllMonsters() {
       return data;
     });
 }
+
+export function fetchMonsterDB() {
+  return request.get("/monster-hunter-DB/monsters.json").then(({ data }) => {
+    return data.monsters;
+  });
+}
