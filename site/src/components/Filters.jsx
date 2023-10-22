@@ -23,33 +23,55 @@ export default function Filters({ monsterSize, setMonsterList }) {
   const filters = monsterSize === "large" ? largeSpecies : smallSpecies;
   return (
     <div>
-      {currentFilter && (
-        <p>
-          Showing: {currentFilter}
-          {currentFilter === "Fish" ? "" : "s"}
-        </p>
-      )}
+      <div>
+        {currentFilter ? (
+          <h3 className="filter-header">
+            Showing {currentFilter}
+            {currentFilter === "Fish" ? "" : "s"}
+          </h3>
+        ) : (
+          <h3 className="filter-header">Showing all Species</h3>
+        )}
 
-      {currentFilter && (
-        <button onClick={() => setCurrentFilter("")}>Reset Filter</button>
-      )}
-      {filters.map((species, index) => {
-        return (
+        {currentFilter && (
           <button
-            key={index}
+            className="reset-filter-button"
             onClick={() => {
-              api
-                .fetchMonstersBySpecies(species.toLowerCase(), monsterSize)
-                .then((data) => {
-                  setMonsterList(data);
-                  setCurrentFilter(species);
+              api.fetchAllMonsters().then((monsters) => {
+                setCurrentFilter("");
+                setMonsterList(() => {
+                  return monsters.filter(
+                    (monster) => monster.type === monsterSize
+                  );
                 });
+              });
             }}
           >
-            {species}
+            Reset Filter
           </button>
-        );
-      })}
+        )}
+      </div>
+      <div>
+        {filters.map((species, index) => {
+          return (
+            <button
+              key={index}
+              className="filter-button"
+              onClick={() => {
+                api
+                  .fetchMonstersBySpecies(species.toLowerCase(), monsterSize)
+                  .then((data) => {
+                    setMonsterList(data);
+                    setCurrentFilter(species);
+                  });
+              }}
+            >
+              {species}
+              {species === "Fish" ? "" : "s"}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }

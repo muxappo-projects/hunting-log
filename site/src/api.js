@@ -43,7 +43,6 @@ export function fetchMonstersBySpecies(species, size) {
       `https://mhw-db.com/monsters?q={"species": "${species}", "type": "${size}"}`
     )
     .then(({ data }) => {
-      console.log(data);
       return data;
     });
 }

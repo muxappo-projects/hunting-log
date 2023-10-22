@@ -5,6 +5,7 @@ import ScrollButton from "./ScrollButton.jsx";
 import MonsterCard from "./MonsterCard.jsx";
 import Filters from "./Filters.jsx";
 import * as api from "../api.js";
+import formatContent from "../../utils.js";
 
 export default function MonsterList({ size, setMonster, setErrorMsg, topRef }) {
   const [monsterList, setMonsterList] = useState([]);
@@ -31,11 +32,15 @@ export default function MonsterList({ size, setMonster, setErrorMsg, topRef }) {
           setMonster("");
         }}
       >
-        <button>Return to Base</button>
+        <button className="home-button">Return to Base</button>
       </Link>
+      <h2 className="list-header">{formatContent(size)} Monsters</h2>
 
-      <h3 className="list-subheader">Filter list by:</h3>
-      <Filters monsterSize={size} setMonsterList={setMonsterList} />
+      <Filters
+        monsterSize={size}
+        monsterList={monsterList}
+        setMonsterList={setMonsterList}
+      />
 
       <ul className="monster-list">
         {monsterList.map((monster) => {
