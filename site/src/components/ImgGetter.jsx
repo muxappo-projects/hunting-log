@@ -1,36 +1,24 @@
 import { useEffect, useState, useContext } from "react";
-import * as api from "../api";
 import { LoadingContext } from "../contexts/LoadingContext";
+import * as api from "../api";
 
 export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
-  const [monsterDB, setMonsterDB] = useState([]);
   const { isLoading, setIsLoading } = useContext(LoadingContext);
-  const [matchingMonster, setMatchingMonster] = useState(null);
-  const [games, setGames] = useState(null);
-  const [matchingImage, setMatchingImage] = useState(null);
+  const [monsterImage, setMonsterImage] = useState(null);
 
   useEffect(() => {
-    api.fetchMonsterDB().then((monsters) => {
-      setMonsterDB(monsters);
-
+    api.fetchMonsterDB().then(({ monsters }) => {
       const foundMonster = monsters.find(
         (monster) => monster.name === monsterName
       );
-      setMatchingMonster(foundMonster);
 
-      if (foundMonster && foundMonster.games) {
-        setGames(foundMonster.games);
-
-        const gameObj = foundMonster.games.find(
-          (game) => game.game === "Monster Hunter World"
-        );
-
-        if (gameObj && gameObj.image) {
-          setMatchingImage(gameObj.image);
-        }
+      const gameObj = foundMonster.games.find(
+        (game) => game.game === "Monster Hunter World"
+      );
+      if (gameObj && gameObj.image) {
+        setMonsterImage(gameObj.image);
+        setIsLoading(false);
       }
-
-      setIsLoading(false);
     });
   }, [monsterName]);
 
@@ -45,8 +33,8 @@ export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
 
   return (
     <img
-      src={`/monster-hunter-DB/icons/${matchingImage}`}
-      alt={`An icon of ${monsterName}`}
+      src={`/monster-hunter-DB/icons/${monsterImage}`}
+      alt={monsterName}
       height={150}
       width={150}
       onClick={searchByCard}

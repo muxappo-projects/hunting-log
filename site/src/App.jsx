@@ -1,19 +1,21 @@
 import { useState, useRef } from "react";
-import "./App.css";
+import { Routes, Route } from "react-router-dom";
 import Header from "./components/Header";
-import FindMonster from "./components/FindMonster";
+import Home from "./components/Home";
 import MonsterDetails from "./components/MonsterDetails";
 import MonsterList from "./components/MonsterList";
-import ScrollButton from "./components/ScrollButton";
+import "./App.css";
 
 export default function App() {
   const [monster, setMonster] = useState(null);
   const [errorMsg, setErrorMsg] = useState("");
   const monsterDetailsRef = useRef(null);
   const topRef = useRef(null);
+
   return (
     <main className="main" ref={topRef}>
       <Header />
+
       {monster && (
         <MonsterDetails
           monster={monster}
@@ -21,17 +23,44 @@ export default function App() {
           ref={monsterDetailsRef}
         />
       )}
-      <FindMonster
-        monster={monster}
-        setMonster={setMonster}
-        errorMsg={errorMsg}
-        setErrorMsg={setErrorMsg}
-      />
-      <h3 className="list-subheader">
-        ...or click on any of the below icons for more info!
-      </h3>
-      <MonsterList setMonster={setMonster} setErrorMsg={setErrorMsg} />
-      <ScrollButton ref={topRef} />
+
+      <Routes>
+        <Route
+          path="/"
+          element={
+            <Home
+              monster={monster}
+              setMonster={setMonster}
+              errorMsg={errorMsg}
+              setErrorMsg={setErrorMsg}
+            />
+          }
+        />
+
+        <Route
+          path="/small-monsters"
+          element={
+            <MonsterList
+              size="small"
+              setMonster={setMonster}
+              setErrorMsg={setErrorMsg}
+              topRef={topRef}
+            />
+          }
+        ></Route>
+
+        <Route
+          path="/large-monsters"
+          element={
+            <MonsterList
+              size="large"
+              setMonster={setMonster}
+              setErrorMsg={setErrorMsg}
+              topRef={topRef}
+            />
+          }
+        ></Route>
+      </Routes>
     </main>
   );
 }

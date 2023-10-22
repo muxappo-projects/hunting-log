@@ -1,5 +1,6 @@
-import ImgGetter from "./ImgGetter";
 import { useEffect, forwardRef } from "react";
+import ImgGetter from "./ImgGetter";
+import formatContent from "../../utils";
 import waterElem from "../images/water_element.png";
 import fireElem from "../images/fire_element.png";
 import dragonElem from "../images/dragon_element.png";
@@ -16,19 +17,6 @@ const MonsterDetails = forwardRef(({ monster, setMonster }, ref) => {
     return weakness.stars === 3;
   });
 
-  function clearSelection() {
-    setMonster("");
-  }
-
-  function formatContent(content) {
-    return content
-      .split(" ")
-      .map((word) => {
-        return word[0].toUpperCase() + word.slice(1);
-      })
-      .join(" ");
-  }
-
   const elements = {
     water: waterElem,
     fire: fireElem,
@@ -38,23 +26,31 @@ const MonsterDetails = forwardRef(({ monster, setMonster }, ref) => {
     poison: poisonElem,
   };
 
+  function clearSelection() {
+    setMonster("");
+  }
+
   return (
     <section className="panel-container" ref={ref}>
       <div className="monster-panel">
         <h3 className="monster-species">{formatContent(monster.species)}</h3>
         <h2 className="monster-name">{monster.name}</h2>
+
         <ImgGetter monsterName={monster.name} setMonster={setMonster} />
+
         {biggestWeakness && (
           <div className="weakness-container">
             <p>Weakness: {formatContent(biggestWeakness.element)} damage</p>
             <img
               className="element-icon"
               src={elements[biggestWeakness.element]}
-              alt={`The in-game icon for ${biggestWeakness.element} damage`}
+              alt={formatContent(biggestWeakness.element)}
             />
           </div>
         )}
+
         <p className="monster-desc">{monster.description}</p>
+
         <button onClick={clearSelection}>Close Monster Profile</button>
       </div>
     </section>
