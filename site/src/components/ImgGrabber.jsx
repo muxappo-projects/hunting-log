@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { LoadingContext } from "../contexts/LoadingContext";
 import * as api from "../api";
 
-export default function ImgGetter({ monsterName, setMonster, setErrorMsg }) {
+export default function ImgGrabber({ monsterName, setMonster, setErrorMsg }) {
   const { isLoading, setIsLoading } = useContext(LoadingContext);
   const [monsterImage, setMonsterImage] = useState(null);
 

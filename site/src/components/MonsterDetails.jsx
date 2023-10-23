@@ -1,5 +1,5 @@
 import { useEffect, forwardRef } from "react";
-import ImgGetter from "./ImgGetter";
+import ImgGrabber from "./ImgGrabber";
 import formatContent from "../utils";
 import waterElem from "../images/water_element.png";
 import fireElem from "../images/fire_element.png";
@@ -36,7 +36,7 @@ const MonsterDetails = forwardRef(({ monster, setMonster }, ref) => {
         <h3 className="monster-species">{formatContent(monster.species)}</h3>
         <h2 className="monster-name">{monster.name}</h2>
 
-        <ImgGetter monsterName={monster.name} setMonster={setMonster} />
+        <ImgGrabber monsterName={monster.name} setMonster={setMonster} />
 
         {biggestWeakness && (
           <div className="weakness-container">
