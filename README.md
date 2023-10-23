@@ -29,10 +29,10 @@ Main page displays the retrieved monsters' names along with matching representat
 - [x] Trigger search by clicking list icons
 - [x] Monster card scrolls into view upon render
 - [x] Gives details on elemental weaknesses, with supp. icons
-- Multi-page emulation (w/ React Router)
-- Small monsters page
-- Endemic life page
-
+- [x] Multi-page emulation (w/ React Router)
+- [x] Small monsters page
+- [x] Filter support by monster species
+- "Add to favourites" and Favourites list functionality
 ## Demo
 
 The main page displaying the full monster list: <br>
