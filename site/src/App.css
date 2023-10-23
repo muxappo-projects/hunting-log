@@ -191,11 +191,8 @@ li > img:active {
 }
 
 .monster-name {
-  scale: 1.7;
-}
-
-.monster-name {
   margin-top: 0;
+  font-size: 2.5rem;
 }
 
 .monster-species {
