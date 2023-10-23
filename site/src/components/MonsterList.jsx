@@ -5,7 +5,7 @@ import ScrollButton from "./ScrollButton.jsx";
 import MonsterCard from "./MonsterCard.jsx";
 import Filters from "./Filters.jsx";
 import * as api from "../api.js";
-import formatContent from "../../utils.js";
+import formatContent from "../utils.js";
 
 export default function MonsterList({ size, setMonster, setErrorMsg, topRef }) {
   const [monsterList, setMonsterList] = useState([]);
