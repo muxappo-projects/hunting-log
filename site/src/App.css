@@ -111,6 +111,7 @@ form > label {
 }
 
 .list-header {
+  font-size: 2.5rem;
   margin-bottom: 0;
 }
 
@@ -321,6 +322,14 @@ li > img:active {
     margin: 5px;
     background-color: rgba(64, 48, 35, 0.87);
     width: 15em;
+  }
+
+  .list-header {
+    font-size: 1.4rem;
+  }
+
+  .filter-header {
+    font-size: 1rem;
   }
 
   .element-icon {
