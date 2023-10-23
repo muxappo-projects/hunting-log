@@ -10,15 +10,20 @@ export default function Home({ monster, setMonster, errorMsg, setErrorMsg }) {
         errorMsg={errorMsg}
         setErrorMsg={setErrorMsg}
       />
+
       <h3 className="list-subheader">
         Or click below to see full lists by monster type:
       </h3>
-      <Link to={"/large-monsters"}>
-        <button className="size-select">Large Monsters</button>
-      </Link>
-      <Link to={"/small-monsters"}>
-        <button className="size-select">Small Monsters</button>
-      </Link>
+
+      <div className="size-select-bg">
+        <Link to={"/large-monsters"}>
+          <button className="size-select">Large Monsters</button>
+        </Link>
+
+        <Link to={"/small-monsters"}>
+          <button className="size-select">Small Monsters</button>
+        </Link>
+      </div>
     </div>
   );
 }
