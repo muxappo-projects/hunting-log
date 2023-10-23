@@ -34,8 +34,9 @@ const MonsterDetails = forwardRef(({ monster, setMonster }, ref) => {
     <section className="panel-container" ref={ref}>
       <div className="monster-panel">
         <h3 className="monster-species">{formatContent(monster.species)}</h3>
-        <h2 className="monster-name">{monster.name}</h2>
-
+        <div className="monster-name-container">
+          <h2 className="monster-name">{monster.name}</h2>
+        </div>
         <ImgGrabber monsterName={monster.name} setMonster={setMonster} />
 
         {biggestWeakness && (

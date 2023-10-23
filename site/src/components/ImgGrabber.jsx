@@ -2,7 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { LoadingContext } from "../contexts/LoadingContext";
 import * as api from "../api";
 
-export default function ImgGrabber({ monsterName, setMonster, setErrorMsg }) {
+export default function ImgGrabber({ monsterName }) {
   const { isLoading, setIsLoading } = useContext(LoadingContext);
   const [monsterImage, setMonsterImage] = useState(null);
 
@@ -22,13 +22,6 @@ export default function ImgGrabber({ monsterName, setMonster, setErrorMsg }) {
     });
   }, [monsterName]);
 
-  function searchByCard() {
-    api.fetchMonsterByName(monsterName).then(([returnedMonster]) => {
-      setMonster(returnedMonster);
-      setErrorMsg("");
-    });
-  }
-
   if (isLoading === true) return <p>Fetching Monster Info...</p>;
 
   return (
@@ -37,7 +30,6 @@ export default function ImgGrabber({ monsterName, setMonster, setErrorMsg }) {
       alt={monsterName}
       height={150}
       width={150}
-      onClick={searchByCard}
     />
   );
 }
