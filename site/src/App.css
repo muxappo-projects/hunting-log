@@ -89,7 +89,7 @@ form > label {
   margin-top: 10px;
   margin-bottom: 10px;
   font-size: 1.6rem;
-  border-radius: 50px;
+  border-radius: 20px;
 }
 
 .home-button {
@@ -116,7 +116,7 @@ form > label {
 
 .filter-button {
   margin-left: 10px;
-  border-radius: 50px;
+  border-radius: 10px;
 }
 
 .monster-list {
@@ -126,7 +126,7 @@ form > label {
   background-color: rgba(59, 54, 43, 0.874);
   color: rgb(210, 192, 155);
   padding-bottom: 25px;
-  border-radius: 50px;
+  border-radius: 35px;
 }
 
 ul {
