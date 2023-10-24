@@ -1,4 +1,5 @@
 import { useEffect, forwardRef } from "react";
+import { Link } from "react-router-dom";
 import ImgGrabber from "./ImgGrabber";
 import formatContent from "../utils";
 import waterElem from "../images/water_element.png";
@@ -49,10 +50,21 @@ const MonsterDetails = forwardRef(({ monster, setMonster }, ref) => {
             />
           </div>
         )}
-
         <p className="monster-desc">{monster.description}</p>
 
-        <button onClick={clearSelection}>Close Monster Profile</button>
+        <div className="button-tray">
+          <a
+            className="wiki-link"
+            href={`https://monsterhunter.fandom.com/wiki/${monster.name}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button>View full Wiki entry</button>
+          </a>
+          <button className="close-button" onClick={clearSelection}>
+            Close Monster Profile
+          </button>
+        </div>
       </div>
     </section>
   );

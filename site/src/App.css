@@ -126,6 +126,7 @@ form > label {
 
 .list-subheader {
   font-size: 1.4rem;
+  margin-bottom: 0;
 }
 
 .filter-button {
@@ -179,7 +180,7 @@ li > img:active {
 
 .monster-panel {
   background-color: rgba(59, 54, 43, 0.874);
-  border-radius: 70px;
+  border-radius: 30px;
   width: 35em;
   padding: 0px 25px 25px;
   margin-top: 15px;
@@ -226,6 +227,17 @@ li > img:active {
   background-color: rgb(185, 169, 140);
 }
 
+.button-tray {
+  display: inline-block;
+}
+
+.wiki-link {
+  margin-right: 10px;
+}
+
+.close-button {
+  margin-left: 10px;
+}
 .error-msg {
   margin-bottom: 0;
 }
@@ -275,6 +287,19 @@ li > img:active {
 
   .monster-panel {
     padding: 15px;
+  }
+
+  .button-tray {
+    display: grid;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .wiki-link,
+  .close-button {
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 10px;
   }
 
   li {
