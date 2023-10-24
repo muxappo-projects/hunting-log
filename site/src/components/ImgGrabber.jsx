@@ -1,9 +1,8 @@
-import { useEffect, useState, useContext } from "react";
-import { LoadingContext } from "../contexts/LoadingContext";
+import { useEffect, useState } from "react";
 import * as api from "../api";
 
 export default function ImgGrabber({ monsterName }) {
-  const { isLoading, setIsLoading } = useContext(LoadingContext);
+  const { isLoading, setIsLoading } = useState(true);
   const [monsterImage, setMonsterImage] = useState(null);
 
   useEffect(() => {

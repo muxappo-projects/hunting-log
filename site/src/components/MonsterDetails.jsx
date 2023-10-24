@@ -1,5 +1,4 @@
 import { useEffect, forwardRef } from "react";
-import { Link } from "react-router-dom";
 import ImgGrabber from "./ImgGrabber";
 import formatContent from "../utils";
 import waterElem from "../images/water_element.png";
